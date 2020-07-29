@@ -13,6 +13,10 @@
 		72CC72BB24CDFFEC0048ADE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72CC72BA24CDFFEC0048ADE8 /* Assets.xcassets */; };
 		72CC72BE24CDFFEC0048ADE8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72CC72BD24CDFFEC0048ADE8 /* Preview Assets.xcassets */; };
 		72CC72C124CDFFEC0048ADE8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72CC72BF24CDFFEC0048ADE8 /* LaunchScreen.storyboard */; };
+		72CC72CA24CE07800048ADE8 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CC72C924CE07800048ADE8 /* NetworkManager.swift */; };
+		72CC72CC24CE0B690048ADE8 /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CC72CB24CE0B690048ADE8 /* PostData.swift */; };
+		72CC72CF24CE32860048ADE8 /* WebsiteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CC72CE24CE32860048ADE8 /* WebsiteView.swift */; };
+		72CC72D124CE38100048ADE8 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CC72D024CE38100048ADE8 /* WebView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,11 @@
 		72CC72BD24CDFFEC0048ADE8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		72CC72C024CDFFEC0048ADE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		72CC72C224CDFFEC0048ADE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		72CC72C924CE07800048ADE8 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		72CC72CB24CE0B690048ADE8 /* PostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
+		72CC72CE24CE32860048ADE8 /* WebsiteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebsiteView.swift; sourceTree = "<group>"; };
+		72CC72D024CE38100048ADE8 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		72CC72D224CE392F0048ADE8 /* HackerNews API.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "HackerNews API.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +65,11 @@
 		72CC72B324CDFFE90048ADE8 /* HackerNews API */ = {
 			isa = PBXGroup;
 			children = (
+				72CC72D224CE392F0048ADE8 /* HackerNews API.entitlements */,
+				72CC72C824CE07600048ADE8 /* Models */,
 				72CC72B424CDFFE90048ADE8 /* AppDelegate.swift */,
 				72CC72B624CDFFE90048ADE8 /* SceneDelegate.swift */,
-				72CC72B824CDFFE90048ADE8 /* ContentView.swift */,
+				72CC72CD24CE10900048ADE8 /* Views */,
 				72CC72BA24CDFFEC0048ADE8 /* Assets.xcassets */,
 				72CC72BF24CDFFEC0048ADE8 /* LaunchScreen.storyboard */,
 				72CC72C224CDFFEC0048ADE8 /* Info.plist */,
@@ -73,6 +84,25 @@
 				72CC72BD24CDFFEC0048ADE8 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		72CC72C824CE07600048ADE8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				72CC72C924CE07800048ADE8 /* NetworkManager.swift */,
+				72CC72CB24CE0B690048ADE8 /* PostData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		72CC72CD24CE10900048ADE8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				72CC72B824CDFFE90048ADE8 /* ContentView.swift */,
+				72CC72CE24CE32860048ADE8 /* WebsiteView.swift */,
+				72CC72D024CE38100048ADE8 /* WebView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,9 +176,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72CC72CC24CE0B690048ADE8 /* PostData.swift in Sources */,
+				72CC72CA24CE07800048ADE8 /* NetworkManager.swift in Sources */,
 				72CC72B524CDFFE90048ADE8 /* AppDelegate.swift in Sources */,
 				72CC72B724CDFFE90048ADE8 /* SceneDelegate.swift in Sources */,
+				72CC72CF24CE32860048ADE8 /* WebsiteView.swift in Sources */,
 				72CC72B924CDFFE90048ADE8 /* ContentView.swift in Sources */,
+				72CC72D124CE38100048ADE8 /* WebView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +318,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "HackerNews API/HackerNews API.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"HackerNews API/Preview Content\"";
 				DEVELOPMENT_TEAM = PCQJZVBWZR;
@@ -295,6 +330,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Chiffonier.HackerNews-API";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -304,6 +340,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "HackerNews API/HackerNews API.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"HackerNews API/Preview Content\"";
 				DEVELOPMENT_TEAM = PCQJZVBWZR;
@@ -315,6 +352,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Chiffonier.HackerNews-API";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
